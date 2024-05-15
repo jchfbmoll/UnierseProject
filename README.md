@@ -21,3 +21,7 @@ La clase __*Planet*__ será una clase que tendrá sus distintos atributos y como
 La clase __*MovingObject*__ será una interfaz.
 
 Las clases __*Meteor*__ y __*Asteroid*__ serán clases que tendrán herencia múltiple, ya que tendrá herencia tanto de la clase Abstracta __*SolarObjet*__ y serán implementaciones de la interfaz __*MovingObject*__.
+
+Se usarán Bases de Datos para poder guardar y cargar los datos de los distintos Universos se creen.
+
+Se usarán el tratamiento de ficheros para poder exportar e importar los distintos universos entre ordenadores.
