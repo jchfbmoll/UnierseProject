@@ -1,3 +1,5 @@
+package Universe;
+
 public class Meteor implements TravellingObject{
 
 

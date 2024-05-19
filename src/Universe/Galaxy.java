@@ -1,4 +1,5 @@
-import java.sql.SQLOutput;
+package Universe;
+
 import java.util.ArrayList;
 import java.util.List;
 public class Galaxy {
@@ -23,9 +24,12 @@ public class Galaxy {
         return type;
     }
     public void getAstralObjects(){
-        System.out.println("Aquesta galaxia té els següents objectes astrals");
-        for (AstralObject astralObject: astralObjects){
-            System.out.println(astralObject.getName() + " és un " + astralObject.getType());
+        if (astralObjects.size() > 0) {
+            for (int i = 0; i<astralObjects.size();i++) {
+                System.out.println((i+1)+ ". " +astralObjects.get(i).getName());
+            }
+        } else {
+            System.out.println("Aquesta Galàxia està Buïda!!!");
         }
     }
     public void getTime(){
@@ -48,8 +52,8 @@ public class Galaxy {
         astralObjects.add(astralObject);
     }
 
-    public void removeGalaxy(AstralObject astralObject){
-        astralObjects.remove(astralObject);
+    public void removeAstralObject(int index){
+        astralObjects.remove(index);
     }
     public int sizeGalaxy(){
         return astralObjects.size();

@@ -1,8 +1,12 @@
+package Universe;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class SolarSystem extends AstralObject{
     private final String name;
+    private final String type = "Solar System";
+
     private final int weight;
     private List<SolarObject> solarObject = new ArrayList<>();
     private final long initial_time;
@@ -36,5 +40,10 @@ public class SolarSystem extends AstralObject{
     @Override
     public int getWeight(){
         return this.weight;
+    }
+    public String getType() {
+        return type;
+
+
     }
 }

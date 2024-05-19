@@ -1,14 +1,18 @@
+package Universe;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Satellit {
+public class Planet extends SolarObject{
     private int weight;
+    private List<Satellit> satellits = new ArrayList<>();
     private final long initial_time;
 
-    public Satellit(int weight){
+    public Planet(int weight){
         this.weight = weight;
         this.initial_time = System.currentTimeMillis();
     }
+    @Override
     public void getTime() {
         long now = System.currentTimeMillis();
         long edat = now - initial_time;
@@ -26,6 +30,7 @@ public class Satellit {
         System.out.println("Aquesta sistema solar té una edat de "+ years + " anys, " + months + " mesos, " + days + " dies, " + hours +" hores, " + minutes + " minuts i " + seconds + " segoms");
     }
 
+    @Override
     public int getWeight() {
         return this.weight;
     }

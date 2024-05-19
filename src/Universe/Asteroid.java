@@ -1,3 +1,5 @@
+package Universe;
+
 public class Asteroid implements TravellingObject{
 
 

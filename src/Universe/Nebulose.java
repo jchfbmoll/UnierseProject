@@ -1,15 +1,20 @@
+package Universe;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Nebulose extends AstralObject{
 
-
-
     private int weight;
+    private String name;
     private List<String> elements = new ArrayList<>();
-    private final long initial_time;
+    private long initial_time;
+    public Nebulose(){
 
-    public Nebulose(String[] elements, int weight) {
+    }
+
+    public Nebulose(String name, List<String> elements, int weight) {
+        this.name = name;
         this.weight = weight;
         this.initial_time = System.currentTimeMillis();
         for (String element: elements){
@@ -34,8 +39,15 @@ public class Nebulose extends AstralObject{
         long years = edat/12;
         System.out.println("Aquesta nebulossa té una edat de "+ years + " anys, " + months + " mesos, " + days + " dies, " + hours +" hores, " + minutes + " minuts i " + seconds + " segoms");
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
     @Override
     public int getWeight(){
         return this.weight;
     }
+
 }
